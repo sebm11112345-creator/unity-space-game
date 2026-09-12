@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Debug = UnityEngine.Debug;
 
 /// <summary>
 /// Manages ship upgrades and their visual representation
