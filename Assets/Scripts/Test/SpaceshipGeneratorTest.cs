@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 /// <summary>
 /// Test scene for spaceship generator
@@ -31,11 +32,11 @@ public class SpaceshipGeneratorTest : MonoBehaviour
     void Update()
     {
         // Keyboard shortcuts to generate different ships
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Keyboard.current.digit1Key.wasPressedThisFrame)
             GenerateScoutShip();
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Keyboard.current.digit2Key.wasPressedThisFrame)
             GenerateBalancedShip();
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        if (Keyboard.current.digit3Key.wasPressedThisFrame)
             GenerateHeavyShip();
 
         // Rotate ship for viewing
